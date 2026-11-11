@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Краткая выжимка микроаудита публичных площадок бара «Заря». Срез на 11 ноября 2026 года.">
+<title>Заря — аудит публичных площадок</title>
+<style>
+:root{--ink:#18232d;--muted:#64717d;--line:#d8e0e5;--paper:#f3f6f7;--card:#fff;--navy:#101923;--navy2:#1a2936;--amber:#e9bd68;--amberdark:#785a1d;--blue:#17618a;--bluepale:#e8f2f8}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.48 "Segoe UI",Arial,sans-serif}a{color:var(--blue)}a:focus-visible,button:focus-visible{outline:3px solid var(--amber);outline-offset:3px}
+header{background:var(--navy);color:#f7f8f8;padding:28px max(24px,calc((100vw - 1160px)/2)) 32px;border-bottom:4px solid var(--amber)}
+.brand,.actions,.chips,.legend,.section-head,.rowtop{display:flex;align-items:center;gap:12px;flex-wrap:wrap}.brand{color:#c4cdd2;font:700 11px/1.2 Consolas,monospace;letter-spacing:.14em}.dot{width:9px;height:9px;border-radius:50%;background:var(--amber)}.rev{margin-left:auto;color:var(--amber)}
+h1{max-width:800px;margin:22px 0 8px;font-size:clamp(30px,4vw,47px);line-height:1.06;letter-spacing:-.035em}.lead{margin:0;max-width:720px;color:#c6cdd1;font-size:16px}.actions{margin-top:22px}
+.btn{display:inline-flex;min-height:42px;align-items:center;justify-content:center;padding:10px 16px;border-radius:5px;border:1px solid var(--amber);background:var(--amber);color:#18212a;text-decoration:none;font-weight:750}.btn.secondary{background:transparent;color:#f7f8f8;border-color:#64717d}
+.chips{max-width:1160px;margin:18px auto 0;padding:0 24px}.chip{display:inline-flex;align-items:center;border:1px solid var(--line);border-radius:3px;background:#fff;padding:6px 9px;color:var(--muted);font:700 11px/1.2 Consolas,monospace}.chip.alert{border-color:#dec98f;background:#fff8e7;color:#725b24}
+.layout{max-width:1160px;margin:22px auto 52px;padding:0 24px;display:grid;grid-template-columns:220px minmax(0,1fr);gap:22px;align-items:start}aside{position:sticky;top:18px}.side,.panel{background:var(--card);border:1px solid var(--line);border-radius:6px}.side{padding:16px}.side-title,.eyebrow,.id,.status,.code{font:700 10px/1.25 Consolas,monospace;letter-spacing:.1em;text-transform:uppercase}.side-title{color:var(--muted);margin:0 0 10px}nav{display:grid;gap:4px}nav a{color:var(--ink);text-decoration:none;padding:8px 9px;border-left:2px solid transparent;font-weight:650}nav a:hover{background:var(--paper);border-left-color:var(--amber)}.side-note{margin:15px 0 0;padding-top:12px;border-top:1px solid var(--line);color:var(--muted);font-size:12px}
+main{min-width:0}.overview{padding:18px;margin-bottom:15px}.eyebrow{color:var(--muted);margin:0 0 9px}.overview h2{margin:0 0 9px;font-size:20px}.overview p{margin:0}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:15px}.stat{border-top:2px solid var(--navy2);background:#f7f9fa;padding:10px 12px}.stat strong{display:block;font:700 22px/1.15 Consolas,monospace;color:var(--navy)}.stat span{display:block;margin-top:3px;color:var(--muted);font-size:12px}.legend{margin-top:14px;padding-top:12px;border-top:1px solid var(--line);color:var(--muted);font:11px/1.3 Consolas,monospace}.legend b{color:var(--ink)}
+.platform{margin:17px 0;scroll-margin-top:16px}.section-head{justify-content:space-between;margin:0 0 8px;padding:0 2px}.section-head h2{margin:0;font-size:21px;letter-spacing:-.015em}.section-code{color:var(--muted);font:700 10px/1.2 Consolas,monospace;letter-spacing:.08em}
+.findings{overflow:hidden}.finding{display:grid;grid-template-columns:130px minmax(0,1fr);gap:16px;padding:14px 17px;border-top:1px solid var(--line)}.finding:first-child{border-top:0}.rowtop{align-items:flex-start;align-content:flex-start;flex-direction:column;gap:7px}.id{color:var(--muted)}.status{display:inline-block;border-radius:3px;padding:4px 6px;background:var(--bluepale);color:var(--blue)}.status.check{background:#fff5dc;color:var(--amberdark)}.copy h3{margin:0 0 4px;font-size:15px}.copy p{margin:3px 0;color:#394751;font-size:13.5px}.copy b{color:var(--ink);font-size:11px;letter-spacing:.035em}.ticket{white-space:nowrap;font-weight:700}.scope{margin:16px 0 0;padding:12px 14px;background:#fff8e7;border-left:3px solid var(--amber);color:#59491f;font-size:13px}footer{max-width:1160px;margin:0 auto;padding:0 24px 34px;color:var(--muted);font-size:12px}footer p{border-top:1px solid var(--line);padding-top:13px}
+@media(max-width:760px){header{padding:23px 18px 26px}.rev{margin-left:0}.chips{padding:0 18px}.layout{display:block;margin-top:15px;padding:0 18px}aside{position:static;margin-bottom:15px}nav{grid-template-columns:repeat(2,minmax(0,1fr))}.side-note{display:none}.stats{grid-template-columns:1fr;gap:6px}.stat{display:flex;align-items:baseline;gap:10px}.stat strong{min-width:34px}.finding{grid-template-columns:1fr;gap:8px;padding:13px}.rowtop{flex-direction:row;align-items:center;justify-content:space-between}}
+@media print{body{background:#fff;font-size:10pt}header{padding:18px 20px;print-color-adjust:exact;-webkit-print-color-adjust:exact}.actions,aside{display:none!important}.chips,.layout,footer{max-width:none;padding-left:0;padding-right:0;margin-left:18px;margin-right:18px}.layout{display:block;margin-top:12px}.panel,.finding{break-inside:avoid}.platform{break-inside:auto}a{color:inherit}}
+</style>
+</head>
+<body>
+<header>
+  <div class="brand"><span class="dot" aria-hidden="true"></span><span>ЗАРЯ · ПУБЛИЧНЫЕ ПЛОЩАДКИ</span><span class="rev">BRIEF 01 / 11.11.2026</span></div>
+  <h1>Краткая выжимка аудита</h1>
+  <p class="lead">Наблюдения и действия по текущему срезу. Краткий формат: факт → следующий шаг.</p>
+  <div class="actions">
+    <a class="btn" href="./2026-11-11_Заря_полный_текущий_аудит.pdf" download>Скачать полную версию PDF</a>
+    <button class="btn secondary" type="button" onclick="window.print()">Печать краткой версии</button>
+  </div>
+</header>
+<div class="chips" aria-label="Статус выпуска">
+  <span class="chip">Срез · 11 ноября 2026</span>
+  <span class="chip">2ГИС · Taplink · Яндекс Карты · сайт</span>
+  <span class="chip alert">Соцсети · аудит не проводился</span>
+</div>
+<div class="layout">
+  <aside><div class="side">
+    <p class="side-title">Навигация</p>
+    <nav aria-label="Площадки">
+      <a href="#gis">01 · 2ГИС</a><a href="#taplink">02 · Taplink и бот</a><a href="#yandex">03 · Яндекс Карты</a><a href="#site">04 · Сайт</a>
+    </nav>
+    <p class="side-note">Срез по публичным страницам и моим проверкам на указанную дату. Автообновления нет.</p>
+  </div></aside>
+  <main>
+    <section class="panel overview" aria-labelledby="overview-title">
+      <p class="eyebrow">Сводка / текущий выпуск</p>
+      <h2 id="overview-title">Объём и границы</h2>
+      <p>Включены 2ГИС, Taplink с Telegram-ботом, Яндекс Карты и сайт. Соцсети пока не проверяла; новые наблюдения можно добавить в следующую версию.</p>
+      <div class="stats">
+        <div class="stat"><strong>04</strong><span>раздела по площадкам</span></div>
+        <div class="stat"><strong>17</strong><span>скриншотов в полной версии</span></div>
+        <div class="stat"><strong>01</strong><span>событие есть на Ticketland, но не видно в афише сайта</span></div>
+      </div>
+      <div class="legend"><span><b>OBS</b> · наблюдение</span><span><b>ACT</b> · действие</span><span><b>CHK</b> · проверить</span></div>
+    </section>
+
+    <section class="platform" id="gis" aria-labelledby="gis-title">
+      <div class="section-head"><h2 id="gis-title">2ГИС</h2><span class="section-code">PLATFORM 01</span></div>
+      <div class="panel findings">
+        <article class="finding"><div class="rowtop"><span class="id">OBS · 2GIS-01</span><span class="status">ACT</span></div><div class="copy">
+          <h3>Карточка и отзывы</h3>
+          <p><b>OBS</b> Основная информация заполнена, фотографий много, отзывы в основном хорошие. Ответов на негативные отзывы я не увидела.</p>
+          <p><b>ACT</b> Сохранить полноту карточки; определить ответственного и порядок ответов на негатив.</p>
+        </div></article>
+      </div>
+    </section>
+
+    <section class="platform" id="taplink" aria-labelledby="taplink-title">
+      <div class="section-head"><h2 id="taplink-title">Taplink и Telegram-бот</h2><span class="section-code">PLATFORM 02</span></div>
+      <div class="panel findings">
+        <article class="finding"><div class="rowtop"><span class="id">OBS · TAP-01</span><span class="status">ACT</span></div><div class="copy">
+          <h3>Основные переходы</h3><p><b>OBS</b> Есть бронирование, меню и основные сведения; прямой ссылки на сайт нет.</p><p><b>ACT</b> Добавить ссылку на сайт.</p>
+        </div></article>
+        <article class="finding"><div class="rowtop"><span class="id">OBS · TAP-02</span><span class="status check">CHK</span></div><div class="copy">
+          <h3>Бонусная карта</h3><p><b>OBS</b> Переход дублируется: альтернативная кнопка снова предлагает Telegram или Google Wallet.</p><p><b>CHK</b> Уточнить актуальность Wallet; если отдельный маршрут не нужен, оставить Telegram.</p>
+        </div></article>
+        <article class="finding"><div class="rowtop"><span class="id">OBS · TAP-03</span><span class="status">ACT</span></div><div class="copy">
+          <h3>Бронирование с компьютера</h3><p><b>OBS</b> Телефонная ссылка у меня не открылась; часы приёма звонков не указаны.</p><p><b>ACT</b> Добавить рабочий способ бронирования с компьютера и обозначить часы для звонков.</p>
+        </div></article>
+        <article class="finding"><div class="rowtop"><span class="id">OBS · TAP-04</span><span class="status check">CHK</span></div><div class="copy">
+          <h3>Данные и день рождения</h3><p><b>OBS</b> Бот собирает контактные данные, включая даты рождения; карта, меню и основная информация доступны кнопками.</p><p><b>CHK</b> Проверить поддержку сегментации и предложения ко дню рождения, согласие на сообщения и экономику.</p>
+        </div></article>
+      </div>
+    </section>
+
+    <section class="platform" id="yandex" aria-labelledby="yandex-title">
+      <div class="section-head"><h2 id="yandex-title">Яндекс Карты</h2><span class="section-code">PLATFORM 03</span></div>
+      <div class="panel findings">
+        <article class="finding"><div class="rowtop"><span class="id">OBS · YMAP-01</span><span class="status check">CHK</span></div><div class="copy">
+          <h3>Меню</h3><p><b>OBS</b> На карточке стоит отметка «Давно не обновлялось»; актуальность меню и цен не подтверждена.</p><p><b>CHK</b> Сверить карточку с действующим меню и обновить данные, если они устарели.</p>
+        </div></article>
+        <article class="finding"><div class="rowtop"><span class="id">OBS · YMAP-02</span><span class="status">ACT</span></div><div class="copy">
+          <h3>Ответы на отзывы</h3><p><b>OBS</b> Я вижу ответы организации на большинство просмотренных отзывов.</p><p><b>ACT</b> Сохранить эту практику.</p>
+        </div></article>
+      </div>
+    </section>
+
+    <section class="platform" id="site" aria-labelledby="site-title">
+      <div class="section-head"><h2 id="site-title">Сайт</h2><span class="section-code">PLATFORM 04</span></div>
+      <div class="panel findings">
+        <article class="finding"><div class="rowtop"><span class="id">OBS · WEB-01</span><span class="status">ACT</span></div><div class="copy">
+          <h3>Знак и слоган</h3><p><b>OBS</b> Логотип отличается от обложки ВКонтакте. Формулировка «между днём и ночью» кажется мне спорной: заря связана с переходом от ночи к дню.</p><p><b>ACT</b> Согласовать единый знак и уточнить слоган.</p>
+        </div></article>
+        <article class="finding"><div class="rowtop"><span class="id">OBS · WEB-02</span><span class="status">ACT</span></div><div class="copy">
+          <h3>Строка фраз и фотокарусель</h3><p><b>OBS</b> Строка не объяснена и не кликабельна, при наведении замирает. Карусель у меня не прокрутилась; первые четыре фото не дают цельного впечатления.</p><p><b>ACT</b> Убрать строку или задать ей функцию; проверить управление каруселью и порядок первых фото.</p>
+        </div></article>
+        <article class="finding"><div class="rowtop"><span class="id">OBS · WEB-03</span><span class="status check">CHK</span></div><div class="copy">
+          <h3>Заявление «№ 1»</h3><p><b>OBS</b> Для формулировки «№ 1 на Цвиллинга, 25» неясны критерий и период сравнения.</p><p><b>CHK</b> Уточнить основание или заменить заявление на конкретное проверяемое преимущество.</p>
+        </div></article>
+        <article class="finding"><div class="rowtop"><span class="id">OBS · WEB-04</span><span class="status check">CHK</span></div><div class="copy">
+          <h3>Сценарий вечера</h3><p><b>OBS</b> На первом экране танцпол указан в 00:30; в блоке истории сцена появляется в 01:00, танцпол — в 03:00.</p><p><b>CHK</b> Уточнить, это пример или фактическое расписание; показать, какие активности доступны раньше.</p>
+        </div></article>
+        <article class="finding"><div class="rowtop"><span class="id">OBS · WEB-05</span><span class="status">ACT</span></div><div class="copy">
+          <h3>Афиша и ссылки</h3><p><b>OBS</b> Названия вечеринок кажутся мне непонятными и слегка безликими. Метки смешивают бронирование, зоны, время и условия входа; ссылки ведут в один Telegram-канал.</p><p><b>ACT</b> Унифицировать смысл меток и вести карточки на информацию о конкретном событии.</p>
+        </div></article>
+        <article class="finding"><div class="rowtop"><span class="id">OBS · WEB-06</span><span class="status">ACT</span></div><div class="copy">
+          <h3>Событие 28 ноября</h3><p><b>OBS</b> В афише сайта я не вижу концерт «84 в Челябинске» 28.11.2026, 20:00. На <a class="ticket" href="https://chel.ticketland.ru/drugoe/zarya-klubnyy-bar/84-v-chelyabinske/" target="_blank" rel="noopener noreferrer">Ticketland</a> билеты доступны.</p><p><b>ACT</b> Добавить событие в афишу и дать прямую ссылку на покупку.</p>
+        </div></article>
+        <article class="finding"><div class="rowtop"><span class="id">OBS · WEB-07</span><span class="status">ACT</span></div><div class="copy">
+          <h3>Контакты и путь к бронированию</h3><p><b>OBS</b> В контактах нет карты; кнопка звонка с компьютера у меня не сработала; Telegram-кнопка открывает публичный канал.</p><p><b>ACT</b> Добавить маршрут и рабочий канал связи для компьютера; направить Telegram-кнопку в канал обращений.</p>
+        </div></article>
+        <article class="finding"><div class="rowtop"><span class="id">OBS · WEB-08</span><span class="status check">CHK</span></div><div class="copy">
+          <h3>Wallet в футере</h3><p><b>OBS</b> Подпись не объясняет маршрут, а ссылка у меня не сработала.</p><p><b>CHK</b> Уточнить назначение и доступность; затем исправить или убрать ссылку.</p>
+        </div></article>
+      </div>
+    </section>
+    <p class="scope"><b>Граница выпуска.</b> Это статичный срез на 11.11.2026 по перечисленным площадкам. Аудит соцсетей не проводился; полная версия будет дополняться после новых наблюдений.</p>
+  </main>
+</div>
+<footer><p>Полная версия — PDF со скриншотами. Сводка отражает наблюдения на дату среза и не подключена к автоматическому обновлению данных.</p></footer>
+</body>
+</html>
