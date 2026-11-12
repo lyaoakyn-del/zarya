@@ -18,6 +18,7 @@ h1{max-width:800px;margin:22px 0 8px;font-size:clamp(30px,4vw,47px);line-height:
 main{min-width:0}.overview{padding:18px;margin-bottom:15px}.eyebrow{color:var(--muted);margin:0 0 9px}.overview h2{margin:0 0 9px;font-size:20px}.overview p{margin:0}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:15px}.stat{border-top:2px solid var(--navy2);background:#f7f9fa;padding:10px 12px}.stat strong{display:block;font:700 22px/1.15 Consolas,monospace;color:var(--navy)}.stat span{display:block;margin-top:3px;color:var(--muted);font-size:12px}.legend{margin-top:14px;padding-top:12px;border-top:1px solid var(--line);color:var(--muted);font:11px/1.3 Consolas,monospace}.legend b{color:var(--ink)}
 .platform{margin:17px 0;scroll-margin-top:16px}.plan-section{margin-top:34px;padding-top:22px;border-top:2px solid var(--line)}.plan-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.week-card{padding:15px 17px}.future-layer{margin-top:12px;padding:15px 17px;border-left:4px solid var(--amber);background:#fffaf0}.future-layer h3{margin:0 0 7px;font-size:15px}.future-layer ul{margin:0;padding-left:18px}.future-layer li{padding:2px 0;color:#394751;font-size:13.5px}.week-kicker{margin:0 0 5px;color:var(--blue);font:700 10px/1.2 Consolas,monospace;letter-spacing:.1em;text-transform:uppercase}.week-card h3{margin:0 0 8px;font-size:15px}.week-card ul{margin:0;padding-left:18px}.week-card li{padding:2px 0;color:#394751;font-size:13.5px}.section-head{justify-content:space-between;margin:0 0 8px;padding:0 2px}.section-head h2{margin:0;font-size:21px;letter-spacing:-.015em}.section-code{color:var(--muted);font:700 10px/1.2 Consolas,monospace;letter-spacing:.08em}
 .findings{overflow:hidden}.finding{display:grid;grid-template-columns:130px minmax(0,1fr);gap:16px;padding:14px 17px;border-top:1px solid var(--line)}.finding:first-child{border-top:0}.rowtop{align-items:flex-start;align-content:flex-start;flex-direction:column;gap:7px}.id{color:var(--muted)}.status{display:inline-block;border-radius:3px;padding:4px 6px;background:var(--bluepale);color:var(--blue)}.status.check{background:#fff5dc;color:var(--amberdark)}.copy h3{margin:0 0 4px;font-size:15px}.copy p{margin:3px 0;color:#394751;font-size:13.5px}.copy b{color:var(--ink);font-size:11px;letter-spacing:.035em}.ticket{white-space:nowrap;font-weight:700}.full-pdf{color:var(--amberdark);font-weight:700;text-decoration:underline;text-decoration-color:var(--amber);text-decoration-thickness:2px;text-underline-offset:3px}.full-pdf:hover{color:#4f3c15}.scope{margin:16px 0 0;padding:12px 14px;background:#fff8e7;border-left:3px solid var(--amber);color:#59491f;font-size:13px}footer{max-width:1160px;margin:0 auto;padding:0 24px 34px;color:var(--muted);font-size:12px}footer p{border-top:1px solid var(--line);padding-top:13px}
+.cycle-note{margin:0 0 10px;padding:12px 16px}.cycle-note p:last-child{margin:0}
 @media(max-width:760px){header{padding:23px 18px 26px}.rev{margin-left:0}.chips{padding:0 18px}.layout{display:block;margin-top:15px;padding:0 18px}aside{position:static;margin-bottom:15px}nav{grid-template-columns:repeat(2,minmax(0,1fr))}.side-note{display:none}.plan-grid{grid-template-columns:1fr}.stats{grid-template-columns:1fr;gap:6px}.stat{display:flex;align-items:baseline;gap:10px}.stat strong{min-width:34px}.finding{grid-template-columns:1fr;gap:8px;padding:13px}.rowtop{flex-direction:row;align-items:center;justify-content:space-between}}
 @media print{body{background:#fff;font-size:10pt}header{padding:18px 20px;print-color-adjust:exact;-webkit-print-color-adjust:exact}.actions,aside{display:none!important}.chips,.layout,footer{max-width:none;padding-left:0;padding-right:0;margin-left:18px;margin-right:18px}.layout{display:block;margin-top:12px}.panel,.finding{break-inside:avoid}.platform{break-inside:auto}a{color:inherit}}
 </style>
@@ -193,48 +194,59 @@ main{min-width:0}.overview{padding:18px;margin-bottom:15px}.eyebrow{color:var(--
 
     <section class="platform plan-section" id="plan" aria-labelledby="plan-title">
       <div class="section-head"><h2 id="plan-title">План действий на первый месяц</h2><span class="section-code">РАЗДЕЛ 02 · 4 НЕДЕЛИ</span></div>
+      <div class="panel cycle-note">
+        <p class="week-kicker">Логика месяца</p>
+        <p><b>Согласовать с руководителем одну бизнес-цель и базу сравнения → запустить пилот → оценить результат относительно цели и исходной точки.</b></p>
+      </div>
       <div class="plan-grid">
         <article class="panel week-card">
           <p class="week-kicker">Неделя 1</p>
-          <h3>Аудит площадок, процессов и аудитории</h3>
+          <h3>Аудит, цель и первичные доработки</h3>
           <ul>
-            <li>Провести глубокий аудит площадок и процессов; зафиксировать, где собираются данные и где прерывается сквозная аналитика.</li>
-            <li>Уточнить бизнес-приоритет на первый месяц и доступные исходные показатели: обращения, брони или билеты, посещаемость — в зависимости от наличия данных.</li>
-            <li>Проверить, где используются UTM-метки, и выбрать точки для первичного внедрения без существенных изменений.</li>
-            <li>Определить, какие потери можно устранить проще всего и где это может дать наибольший результат.</li>
-            <li>Проанализировать целевую аудиторию, текущую сегментацию и портреты; проверить, описаны ли в них потребности, боли, сомнения и возражения.</li>
+            <li>Провести глубокий аудит площадок, процессов и аналитики: понять, где собираются данные и где разрывается сквозная аналитика.</li>
+            <li><b>Согласовать с руководителем одну бизнес-цель на месяц</b> и исходную точку для сравнения: брони, билеты, посещаемость или другой согласованный показатель.</li>
+            <li>Проверить использование UTM-меток и выбрать точки для их первичного внедрения без существенных изменений.</li>
+            <li>Выбрать самые доступные и значимые доработки по результатам первичного аудита и начать их реализацию после согласования приоритетов и ответственности.</li>
+            <li>Проанализировать аудиторию, текущую сегментацию и портреты: описаны ли потребности, боли, сомнения и возражения.</li>
+            <li>Начать анализ конкурентов: контент, рекламные коммуникации и акции.</li>
           </ul>
         </article>
         <article class="panel week-card">
           <p class="week-kicker">Неделя 2</p>
-          <h3>Аудитория, система контента и пилот</h3>
+          <h3>Аудитория, дизайн-код и подготовка пилота</h3>
           <ul>
-            <li>Продолжить работу с портретами ЦА и определить тон коммуникации (tone of voice).</li>
-            <li>Зафиксировать маркетинговое ядро в компилируемой базе знаний; выстроить индексы и связи для будущей работы агента с этой базой.</li>
-            <li>Создать агента-копирайтера для бара и подобрать нужные навыки; проанализировать дизайн-код и расширить его палитрами для соцсетей.</li>
-            <li>Взять <a href="https://chel.ticketland.ru/drugoe/zarya-klubnyy-bar/84-v-chelyabinske/" target="_blank" rel="noopener noreferrer">«84 в Челябинске»</a> за пилот: составить карту прогрева, связать её с выбранным бизнес-приоритетом и определить, какие этапы пути гостя можно измерить. Минимальная контрольная точка — переход с сайта на покупку билета.</li>
+            <li>Продолжить работу с портретами целевой аудитории и определить tone of voice.</li>
+            <li>Зафиксировать маркетинговое ядро в компилируемой базе знаний; выстроить индексы и связи для будущей работы агента.</li>
+            <li>Создать агента-копирайтера для бара и подобрать нужные навыки.</li>
+            <li>Проанализировать текущий дизайн-код и доработать его до расширенной версии для соцсетей: определить палитры и правила применения фирменных элементов в форматах площадок.</li>
+            <li>Завершить обзор конкурентов по контенту, рекламе и акциям; отметить идеи для проверки, не копируя их автоматически.</li>
+            <li>Подготовить пилот для ближайшего события — <a href="https://chel.ticketland.ru/drugoe/zarya-klubnyy-bar/84-v-chelyabinske/" target="_blank" rel="noopener noreferrer">«84 в Челябинске»</a>: составить карту прогрева, связать её с согласованной целью и базой, определить измеримые этапы пути. Минимальная контрольная точка — переход с сайта к покупке билета.</li>
           </ul>
         </article>
         <article class="panel week-card">
           <p class="week-kicker">Неделя 3</p>
-          <h3>Контент-план: реализация и анализ</h3>
+          <h3>Контент-план, пилот и обратная связь команды</h3>
           <ul>
             <li>Проанализировать текущую контент-стратегию и обратную связь аудитории.</li>
-            <li>Сформировать контент-план на основе контент-стратегии, карт прогрева ближайших вечеринок и обновлённого дизайн-кода; учесть подходящие форматы для площадок.</li>
-            <li>Подготовить и начать публиковать материалы по контент-плану.</li>
-            <li>Запустить узкий тест таргетированной кампании по интересам и географии Челябинска: включить интерес к музыканту пилотного события и похожим исполнителям. Перед запуском согласовать тестовый бюджет и проверить доступность сегментов в рекламном кабинете.</li>
-            <li>Начать фиксировать доступные результаты публикаций и провести первый анализ, чтобы на следующей неделе сравнить динамику.</li>
+            <li>Сформировать контент-план на основе стратегии, карт прогрева ближайших вечеринок и расширенного дизайн-кода; учесть форматы площадок.</li>
+            <li>Подготовить и начать публиковать материалы <b>в связке с SMM-менеджером</b>.</li>
+            <li>Собрать канбан-доску подготовки контента: у каждой публикации указать ответственного и текущую стадию. Для видео зафиксировать маршрут: сценарий → съёмка → монтаж → проверка субтитров → согласование → публикация.</li>
+            <li>Уточнить у официантов, где возникают сложности с допродажами. Взять интервью у поваров, барменов и кальянных мастеров; начать готовить посты о вкусовых сочетаниях и о том, что с чем попробовать, чтобы официантам было проще предлагать позиции. При целесообразности рассмотреть связку с акцией или скидкой.</li>
+            <li>Запустить пилотную карту прогрева выбранного события и узкий тест таргетированной кампании по интересам и географии Челябинска: включить аудиторию музыканта события и похожих исполнителей. До запуска согласовать бюджет и проверить доступность сегментов в рекламном кабинете.</li>
+            <li>Фиксировать доступные результаты публикаций и провести промежуточный анализ.</li>
           </ul>
         </article>
         <article class="panel week-card">
           <p class="week-kicker">Неделя 4</p>
-          <h3>Новогодние мероприятия и корпоративы</h3>
+          <h3>Аналитика, контент-система и новые каналы</h3>
           <ul>
-            <li>Продолжить анализ доступных результатов публикаций; сопоставить показатели постов третьей и четвёртой недель с исходными данными и отметить ограничения измерения.</li>
-            <li>Подвести итоги тестовой кампании по доступным данным и зафиксировать ограничения измерения.</li>
-            <li>По результатам определить, что стоит продолжить или скорректировать в следующем цикле.</li>
-            <li>Проанализировать новогодние мероприятия и подготовиться к прогреву новогодней вечеринки.</li>
-            <li>Уточнить возможность проведения корпоративов в будние дни.</li>
+            <li>Продолжить анализ постов и сравнить публикации третьей и четвёртой недель.</li>
+            <li>Проверить доступ к Яндекс Метрике и настройку целей; сравнить сопоставимые периоды. Связать переходы и обращения с бронями, продажами билетов, посещаемостью и средним чеком — в той мере, в какой доступны данные. Отдельно зафиксировать места разрыва аналитики.</li>
+            <li>Оценить пилот по согласованной бизнес-цели и исходной точке; определить, что продолжить или скорректировать в следующем цикле.</li>
+            <li>Начать выстраивать контент-завод на единой маркетинговой базе для всех участников медиа-контура; определить общие источники информации и этапы работы команды.</li>
+            <li>Запустить аккаунт TikTok заведения и подготовить первые публикации.</li>
+            <li>Проверить в Яндекс Wordstat спрос по темам вроде «где отдохнуть в Челябинске» и «где попробовать авторские коктейли»; по результатам решить, стоит ли тестировать статьи в Дзене.</li>
+            <li>Проанализировать новогодние мероприятия, подготовиться к прогреву новогодней вечеринки и уточнить возможность проведения корпоративов в будние дни.</li>
           </ul>
         </article>
       </div>
@@ -242,8 +254,10 @@ main{min-width:0}.overview{padding:18px;margin-bottom:15px}.eyebrow{color:var(--
         <p class="week-kicker">Отдельный будущий слой · после первого месяца</p>
         <h3 id="future-title">2+ месяц</h3>
         <ul>
-          <li>Для поздравления с днём рождения через бота сначала проверить, доступны ли автоматизация и сегментация, есть ли согласие на сообщения и сходится ли экономика предложения.</li>
-          <li>Разработать маркетинговые акции ко дню рождения и другим поводам с учётом результатов этой проверки.</li>
+          <li>Развивать контент-завод и общую маркетинговую базу: улучшать рабочую версию, повышать автоматизацию и качество контента для всех участников медиа-контура.</li>
+          <li>Планировать широкоохватные имиджевые кампании об атмосфере, lifestyle и предложениях заведения, а также узкие кампании под конкретные мероприятия.</li>
+          <li>Для поздравления с днём рождения через бота сначала проверить доступность автоматизации и сегментации, наличие согласия на сообщения и экономику предложения.</li>
+          <li>Разрабатывать маркетинговые акции ко дню рождения и другим поводам с учётом результатов проверки и данных об эффективности.</li>
         </ul>
       </div>
     </section>
