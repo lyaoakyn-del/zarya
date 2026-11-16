@@ -1,0 +1,126 @@
+﻿<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Отчёт после тайного визита в бар «Заря» и анализ влияния маркетинга на допродажи.">
+<title>Заря — отчёт после визита и анализ допродаж</title>
+<style>
+:root{--ink:#18232d;--muted:#64717d;--line:#d8e0e5;--paper:#f3f6f7;--card:#fff;--navy:#101923;--navy2:#1a2936;--amber:#e9bd68;--amberdark:#785a1d;--blue:#17618a;--bluepale:#e8f2f8;--green:#2f6b57;--greenpale:#eaf4ef;--goldpale:#fff8e7}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.55 "Segoe UI",Arial,sans-serif}a{color:var(--blue)}a:focus-visible,button:focus-visible{outline:3px solid var(--amber);outline-offset:3px}
+header{background:var(--navy);color:#f7f8f8;padding:28px max(24px,calc((100vw - 1160px)/2)) 32px;border-bottom:4px solid var(--amber)}.brand,.actions,.chips,.section-head,.tags{display:flex;align-items:center;gap:10px;flex-wrap:wrap}.brand{color:#c4cdd2;font:700 11px/1.2 Consolas,monospace;letter-spacing:.14em}.dot{width:9px;height:9px;border-radius:50%;background:var(--amber)}.rev{margin-left:auto;color:var(--amber)}h1{max-width:850px;margin:22px 0 8px;font-size:clamp(30px,4.5vw,50px);line-height:1.06;letter-spacing:-.035em}.lead{max-width:790px;margin:0;color:#c6cdd1;font-size:17px}.actions{margin-top:22px}.btn{display:inline-flex;min-height:42px;align-items:center;justify-content:center;padding:10px 16px;border-radius:5px;border:1px solid var(--amber);background:var(--amber);color:#18212a;text-decoration:none;font-weight:750;cursor:pointer}.btn.secondary{background:transparent;color:#f7f8f8;border-color:#64717d}
+.chips{max-width:1160px;margin:18px auto 0;padding:0 24px}.chip{display:inline-flex;align-items:center;border:1px solid var(--line);border-radius:3px;background:#fff;padding:6px 9px;color:var(--muted);font:700 11px/1.2 Consolas,monospace}.layout{max-width:1160px;margin:22px auto 52px;padding:0 24px;display:grid;grid-template-columns:220px minmax(0,1fr);gap:22px;align-items:start}.side,.panel{background:var(--card);border:1px solid var(--line);border-radius:6px}.side{position:sticky;top:18px;padding:16px}.side-title,.eyebrow,.code,.tag{font:700 10px/1.25 Consolas,monospace;letter-spacing:.1em;text-transform:uppercase}.side-title{color:var(--muted);margin:0 0 10px}nav{display:grid;gap:4px}nav a{color:var(--ink);text-decoration:none;padding:8px 9px;border-left:2px solid transparent;font-weight:650}nav a:hover{background:var(--paper);border-left-color:var(--amber)}.side-note{margin:15px 0 0;padding-top:12px;border-top:1px solid var(--line);color:var(--muted);font-size:12px}main{min-width:0}.section{margin:0 0 18px;scroll-margin-top:16px}.section-head{justify-content:space-between;margin:0 0 8px;padding:0 2px}.section-head h2{margin:0;font-size:21px;letter-spacing:-.015em}.code{color:var(--muted)}.panel{padding:18px}.eyebrow{color:var(--muted);margin:0 0 9px}.summary{border-top:3px solid var(--amber)}.summary h2{margin:0 0 8px;font-size:19px}.summary p{margin:6px 0;color:#394751}.callout{margin:12px 0 0;padding:12px 14px;background:var(--greenpale);border-left:3px solid var(--green);color:#254d40;font-size:14px}.audience{display:grid;grid-template-columns:1fr 1fr;gap:12px}.aud-card{padding:16px;background:#fff;border:1px solid var(--line);border-radius:6px}.aud-card h3{margin:0 0 6px;font-size:16px}.aud-card p{margin:0;color:#394751;font-size:14px}.tag{display:inline-flex;padding:5px 7px;border-radius:3px;background:var(--bluepale);color:var(--blue)}.tag.good{background:var(--greenpale);color:var(--green)}.tag.opportunity{background:var(--goldpale);color:var(--amberdark)}.findings{overflow:hidden;padding:0}.finding{display:grid;grid-template-columns:130px minmax(0,1fr);gap:16px;padding:15px 17px;border-top:1px solid var(--line)}.finding:first-child{border-top:0}.finding h3{margin:0 0 5px;font-size:15px}.finding p{margin:4px 0;color:#394751;font-size:13.5px}.rowmeta{display:flex;flex-direction:column;align-items:flex-start;gap:7px}.rowmeta small{font:700 10px/1.25 Consolas,monospace;letter-spacing:.08em;color:var(--muted);text-transform:uppercase}.findings strong{color:var(--ink)}.answer{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.lever{padding:15px 16px;background:#fff;border:1px solid var(--line);border-radius:6px}.lever h3{margin:0 0 6px;font-size:15px}.lever p{margin:0;color:#394751;font-size:13.5px}.lever .num{display:inline-block;margin-right:5px;color:var(--amberdark);font:700 11px Consolas,monospace}.metrics{width:100%;border-collapse:collapse;font-size:13.5px}.metrics th,.metrics td{text-align:left;vertical-align:top;padding:10px 11px;border-bottom:1px solid var(--line)}.metrics th{background:#f7f9fa;font:700 10px/1.3 Consolas,monospace;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}.metrics tr:last-child td{border-bottom:0}.closing{background:var(--navy2);color:#f2f5f6}.closing h2{margin:0 0 8px;font-size:19px}.closing p{margin:5px 0;color:#d5dde1}.closing strong{color:#fff}footer{max-width:1160px;margin:0 auto;padding:0 24px 34px;color:var(--muted);font-size:12px}footer p{border-top:1px solid var(--line);padding-top:13px}
+@media(max-width:760px){header{padding:23px 18px 26px}.rev{margin-left:0}.chips{padding:0 18px}.layout{display:block;margin-top:15px;padding:0 18px}.side{position:static;margin-bottom:15px}nav{grid-template-columns:repeat(2,minmax(0,1fr))}.side-note{display:none}.audience,.answer{grid-template-columns:1fr}.finding{grid-template-columns:1fr;gap:8px;padding:13px}.rowmeta{flex-direction:row;align-items:center;justify-content:space-between}.metrics{font-size:12px}.metrics th,.metrics td{padding:8px 6px}}
+@media(max-width:420px){header{padding-left:15px;padding-right:15px}.chips,.layout,footer{padding-left:15px;padding-right:15px}.metrics th,.metrics td{font-size:11.5px}.metrics th:first-child,.metrics td:first-child{min-width:118px}}
+@media print{body{background:#fff;font-size:10pt}header{padding:18px 20px;print-color-adjust:exact;-webkit-print-color-adjust:exact}.actions,aside{display:none!important}.chips,.layout,footer{max-width:none;padding-left:0;padding-right:0;margin-left:18px;margin-right:18px}.layout{display:block;margin-top:12px}.panel,.finding,.lever,.aud-card{break-inside:avoid}.section{break-inside:auto}a{color:inherit}}
+</style>
+</head>
+<body>
+<header>
+  <div class="brand"><span class="dot" aria-hidden="true"></span><span>ЗАРЯ · ОПЫТ ГОСТЯ</span><span class="rev">FIELD REPORT / 14→15.11.2026</span></div>
+  <h1>Отчёт после визита: путь гостя и допродажи</h1>
+  <p class="lead">Наблюдения за вечером в «Заре» и предложения по меню кухни, выбору напитков и повторным заказам.</p>
+  <div class="actions">
+    <a class="btn" href="./index.html">К аудиту площадок</a>
+    <button class="btn secondary" type="button" onclick="window.print()">Печать / сохранить PDF</button>
+  </div>
+</header>
+<div class="chips" aria-label="Объём наблюдения">
+  <span class="chip">Визит · около 23:30–04:00, ночь 14→15 ноября</span>
+  <span class="chip">Маршрут · вход → гардероб → бар → танцпол</span>
+  <span class="chip">Сервис за столами отдельно не оценивался</span>
+</div>
+<div class="layout">
+  <aside><div class="side">
+    <p class="side-title">В отчёте</p>
+    <nav aria-label="Навигация по отчёту">
+      <a href="#summary">Короткий вывод</a>
+      <a href="#journey">Путь гостя</a>
+      <a href="#upsell">Допродажи</a>
+      <a href="#pilot">Проверка меню кухни</a>
+      <a href="#audience">Аудитория</a>
+    </nav>
+    <p class="side-note">Полевой срез одного визита. В отчёте отдельно описаны наблюдения и направления для проверки.</p>
+  </div></aside>
+  <main>
+    <section class="section panel summary" id="summary" aria-labelledby="summary-title">
+      <p class="eyebrow">01 · КОРОТКИЙ ВЫВОД</p>
+      <h2 id="summary-title">Сильная атмосфера; гостю можно помочь с выбором</h2>
+      <p>Охрана помогла мне сориентироваться, в гардеробе встретили приветливо, коктейль приготовили быстро. На танцполе всю ночь были гости разных возрастов; атмосфера показалась энергичной.</p>
+      <p>В нескольких точках мне не хватило подсказки: после входа я не сразу поняла, где сесть, получила только меню бара, а меню кухни попросила сама. Бармен не помог выбрать коктейль, повторный напиток и кальян не предложили. При этом кальянщик хорошо подобрал вкус и крепость, а заказанная позже закуска мне понравилась.</p>
+      <div class="callout"><strong>Что проверить в первую очередь:</strong><br><strong>Посадка.</strong> На сайте и в соцсетях написать: «Планируете вечер? Успейте забронировать столик». Добавить заметную кнопку и указать часы приёма звонков. На входе объяснять, что за баром можно сесть при наличии свободных мест.<br><strong>Первый пилот — меню кухни.</strong> Во время работы кухни предлагать её полное меню вместе с меню бара. Актуальную версию можно открыть по QR-коду. Сравнить заказы кухни и валовую прибыль до и после пилота на нескольких похожих сменах.</div>
+    </section>
+
+    <section class="section" id="journey" aria-labelledby="journey-title">
+      <div class="section-head"><h2 id="journey-title">Путь гостя: наблюдения</h2><span class="code">02 · ПУТЬ ГОСТЯ</span></div>
+      <div class="panel findings">
+        <article class="finding"><div class="rowmeta"><small>Вход</small><span class="tag good">Сработало</span></div><div><h3>Помогли сориентироваться</h3><p>На входе попросили показать паспорт и проверили сумку. Охрана подсказала, куда пройти; девушки в гардеробе встретили приветливо.</p></div></article>
+        <article class="finding"><div class="rowmeta"><small>Посадка</small><span class="tag opportunity">Было неясно</span></div><div><h3>Не сразу поняла, как занять столик</h3><p>Когда я спросила, как сесть за столики, бармены объяснили, что их уже забронировали. За баром были свободные места; о бронировании заранее я не знала.</p><p><strong>Что сделать:</strong> на сайте и в соцсетях написать: «Планируете вечер? Успейте забронировать столик». Добавить заметную кнопку и указать часы приёма звонков. На входе объяснять, что столик лучше забронировать, а за баром можно сесть при наличии мест.</p></div></article>
+        <article class="finding"><div class="rowmeta"><small>Коктейль</small><span class="tag">Быстро · без рекомендации</span></div><div><h3>Я спросила, что бармен рекомендует</h3><p>Он ответил: «Ну, по своему вкусу, смотря что нравится». В итоге предложил выбрать по меню. Сначала я обратилась к одному бармену, затем подошёл другой; рекомендации по моим предпочтениям я не получила.</p><p><strong>Что сделать:</strong> если гость хочет что-то особенное, предложить авторский коктейль по его вкусу, в том числе вне меню. Такой заказ может увеличить средний чек.</p></div></article>
+        <article class="finding"><div class="rowmeta"><small>Следующий напиток</small><span class="tag opportunity">Не предложили</span></div><div><h3>Совет дал постоянный гость</h3><p>Сотрудники не предложили второй напиток. Постоянный гость посоветовал попробовать ежевичное вино; я решила заказать его сама. Оно показалось мне приятным и не слишком сладким.</p><p><strong>Что сделать:</strong> предложить следующий напиток с учётом выбора гостя и хода вечера.</p></div></article>
+        <article class="finding"><div class="rowmeta"><small>Кальян</small><span class="tag good">Сильная консультация</span></div><div><h3>Кальянщик хорошо подобрал вкус и крепость</h3><p>Кальян я заказала сама; чтобы кальянщик подошёл, пришлось попросить дважды. Выбор табаков небольшой, в основном базовые вкусы. При этом кальянщик хорошо разбирается во вкусах и помог мне выбрать. Кальян был очень хорошим и именно той крепости, которую я просила. Мне не предложили заменить угли или заказать ещё один кальян.</p><p><strong>Что сделать:</strong> сохранить такой уровень консультации и в подходящий момент предложить повторный кальян. Отсутствие предложения о замене углей на кальяне по акции не считать маркетинговой ошибкой: это вопрос экономики и стандартов обслуживания.</p></div></article>
+        <article class="finding"><div class="rowmeta"><small>Оплата</small><span class="tag good">Решили быстро</span></div><div><h3>Анастасия помогла с двойной оплатой</h3><p>Я случайно дважды оплатила кальян. Администратор Анастасия сверила чеки, подробно объяснила дальнейшие действия, взяла мои контакты на случай, если возврат не поступит автоматически, и передала информацию управляющей. Вопрос решили быстро и вежливо.</p></div></article>
+        <article class="finding"><div class="rowmeta"><small>Кухня</small><span class="tag opportunity">Меню попросила сама</span></div><div><h3>Меню кухни мне не предложили</h3><p>Сначала мне предложили только меню бара. Позже я сама попросила меню кухни и заказала закуску. Хотя я спросила, что порекомендуют, совета по блюду не получила. Закуска мне понравилась.</p><p><strong>Что сделать:</strong> предлагать полное меню кухни вместе с меню бара и помогать с выбором, если гость спрашивает.</p></div></article>
+      </div>
+      <p class="callout"><strong>Бронирование:</strong> в <a href="./index.html">первом аудите площадок</a> я отметила сложности с Taplink на компьютере. Это ещё одна причина заметно показать на сайте, как забронировать столик.</p>
+    </section>
+
+    <section class="section" id="upsell" aria-labelledby="upsell-title">
+      <div class="section-head"><h2 id="upsell-title">Как маркетолог может влиять на допродажи</h2><span class="code">03 · ОТВЕТ НА ВОПРОС СОБЕСЕДОВАНИЯ</span></div>
+      <div class="panel summary">
+        <p style="margin-top:0;color:#394751">В моём визите я сама попросила меню кухни, не получила рекомендаций по коктейлю и блюду, а следующий напиток и кальян мне не предложили. Эти ситуации показывают, где маркетинг может помочь команде.</p>
+        <p style="color:#394751">Маркетолог может помочь гостю заметить ассортимент и выбрать, подготовить скрипты для команды, разработать акции и предложения, а рекламные расходы распределять по результатам продаж и прибыли.</p>
+      </div>
+      <div class="answer" style="margin-top:10px">
+        <article class="lever"><h3><span class="num">01</span>Показывать меню кухни</h3><p>Во время работы кухни предлагать её полное меню вместе с меню бара. Актуальную версию можно открыть по QR-коду.</p></article>
+        <article class="lever"><h3><span class="num">02</span>Помогать выбрать напиток</h3><p>Вместе с баром определить, какие авторские коктейли сотрудники могут предлагать под вкус гостя, в том числе за пределами меню. Особый запрос — возможность предложить вариант дороже и повысить средний чек.</p></article>
+        <article class="lever"><h3><span class="num">03</span>Разработать скрипты</h3><p>Подготовить короткие фразы для предложения кухни, авторского коктейля, следующего напитка и повторного кальяна. Например: «Показать меню кухни?» или «Подобрать авторский коктейль под ваш вкус?»</p></article>
+        <article class="lever"><h3><span class="num">04</span>Создавать предложения</h3><p>Подбирать акции и маркетинговые предложения под разные поводы визита и аудитории; заранее оценивать условия и валовую прибыль.</p></article>
+        <article class="lever"><h3><span class="num">05</span>Настраивать привлечение</h3><p>По сегментам сравнивать средний чек, траты на гостя, прибыль после рекламных расходов и повторные визиты. Перераспределять бюджет в пользу кампаний, которые устойчиво приносят прибыль.</p></article>
+      </div>
+      <p class="callout"><strong>Сквозная аналитика:</strong> нужно связать источник рекламы и повод или сегмент визита с бронью, CRM и оплатой в кассе. <a href="https://www.yandex.ru/support/metrica/ru/crm/about">Яндекс Метрика</a> принимает заказы из CRM, связывает их с онлайн-визитами и позволяет создавать сегменты по данным об офлайн-продажах. <a href="https://help-ru.roistat.com/quick-start/Nastrojka-skvoznoj-analitiki/">Roistat</a> соединяет визиты и рекламные расходы со сделками из CRM, чтобы оценивать прибыльность кампаний. По связанным данным можно сравнивать средний чек и прибыль по сегментам. Для «Зари» это сработает, если бронирование или визит удастся связать с кассовым чеком.</p>
+      <p class="callout"><strong>Кальян и повторный заказ:</strong> Цена кальяна по акции до полуночи — 990 ₽. По информации команды, после полуночи кальяны по полной цене заказывают редко. Отсутствие предложения заменить угли на акционном кальяне я бы не считала маркетинговой ошибкой: решение зависит от экономики и стандарта обслуживания. При этом в подходящий момент гостю можно предложить второй кальян. Возможно, отсутствие такого предложения влияет на число повторных заказов — это гипотеза. Проверить её можно на нескольких сменах: отмечать, предлагали ли гостю второй кальян и оформил ли он заказ.</p>
+    </section>
+
+    <section class="section" id="pilot" aria-labelledby="pilot-title">
+      <div class="section-head"><h2 id="pilot-title">Как проверить первый пилот</h2><span class="code">04 · МЕНЮ КУХНИ</span></div>
+      <div class="panel">
+        <p>В первом пилоте команда предлагает меню кухни вместе с меню бара, пока кухня работает.</p>
+        <p>До запуска записать показатели за несколько смен, когда кухня работает:</p>
+        <ul>
+          <li><strong>Заказы кухни:</strong> сколько чеков за баром содержат блюдо кухни из общего числа чеков за баром.</li>
+          <li><strong>Средний чек:</strong> средняя сумма одного чека.</li>
+          <li><strong>Валовая прибыль по кухне:</strong> выручка за блюда за вычетом их себестоимости.</li>
+        </ul>
+        <p>После нескольких похожих смен с предложением меню записать те же показатели и сравнить. Так будет видно, стали ли гости чаще заказывать кухню, изменился ли чек и выросла ли прибыль. Для расчёта прибыли понадобятся данные о себестоимости.</p>
+      </div>
+    </section>
+
+    <section class="section" id="audience" aria-labelledby="audience-title">
+      <div class="section-head"><h2 id="audience-title">Аудитория и атмосфера</h2><span class="code">05 · ПОВОДЫ ВИЗИТА</span></div>
+      <div class="audience">
+        <article class="aud-card"><span class="tag good">НАБЛЮДЕНИЕ</span><h3>Разные возрасты на одном танцполе</h3><p>По моему впечатлению, в зале было много зумеров. Среди гостей также были посетители 30+ и один постоянный гость примерно 60 лет. Я заметила студентов и более обеспеченных гостей. Молодёжь чаще приходила компаниями, люди постарше — по одному. В эту ночь танцевали гости разных возрастов, но молодёжи было больше.</p></article>
+        <article class="aud-card"><span class="tag">СЛОВА ГОСТЯ</span><h3>Атмосфера как причина возвращаться</h3><p>Один постоянный гость сказал, что выбирает «Зарю» из-за музыки, публики и настроения. Это его личный ответ, не вывод обо всей аудитории.</p></article>
+      </div>
+      <div class="panel" style="margin-top:10px"><p style="margin:0;color:#394751">В музыке чередовались знакомые хиты Димы Билана и старые треки Тимати с актуальными молодёжными песнями из TikTok. Отдельной программы не было: вечер держался на диджее, MC и танцполе.</p></div>
+      <div class="answer" style="margin-top:10px">
+        <article class="lever"><h3>Знакомства и общение</h3><p>Могут быть одним из важных поводов визита. Стоит проверить, насколько гостям важны комфорт общения, возможность прийти одному или компанией и атмосфера.</p></article>
+        <article class="lever"><h3>Музыка и танцы</h3><p>В эту ночь на танцполе были гости разных возрастов. Часть гостей может приходить именно ради музыки или танцпола — это гипотеза.</p></article>
+        <article class="lever"><h3>Коктейли и кальян</h3><p>Для части гостей это может быть отдельным поводом или частью вечера. Размер такой аудитории и её покупки я не измеряла.</p></article>
+        <article class="lever"><h3>Кухня как часть вечера</h3><p>Еда может дополнять вечер, но насколько она влияет на выбор заведения, стоит узнать у гостей.</p></article>
+      </div>
+      <div class="panel" style="margin-top:10px"><p style="margin:0;color:#394751">Один человек может прийти пообщаться, потанцевать и заказать напитки. Поэтому сначала стоит изучать повод визита и поведение, а возраст, размер компании, повторность и покупки — как отдельные срезы. Расходы различаются и внутри одной возрастной группы; по внешнему виду их не определить, нужны обезличенные данные о покупках.</p></div>
+      <p class="callout"><strong>Мини-проверка:</strong> на нескольких вечерах с разными форматами спросить «Что привело вас сегодня?» и «Что в вечере для вас главное?». Записать повод визита, пришёл ли гость один или компанией, а возраст учитывать только как дополнительную добровольную категорию. Затем сопоставить ответы с агрегированными заказами, средним чеком и валовой прибылью. Для кухни отдельно смотреть заказы за баром во время её работы.</p>
+
+      <div class="panel" style="margin-top:10px"><p style="margin:0;color:#394751"><strong>Вывод.</strong> Широкий возрастной диапазон не мешал гостям вместе танцевать и поддерживать атмосферу. Полезнее проверить поводы визита и покупки, сохранив возраст как дополнительный срез.</p></div>
+    </section>
+
+    <section class="section panel closing" aria-labelledby="closing-title">
+      <h2 id="closing-title">С чего начать</h2>
+      <p>Сохранить танцевальную атмосферу и сначала проверить меню кухни у бара: предлагать его вместе с меню бара, а затем сравнить заказы и валовую прибыль на похожих сменах.</p>
+    </section>
+</main>
+</div>
+<footer><p>Отчёт основан на одном визите примерно с 23:30 14 ноября до 04:00 15 ноября 2026 года. Я сидела за баром и не наблюдала обслуживание за столами. Оценки аудитории и покупательской способности требуют проверки по данным продаж.</p></footer>
+</body>
+</html>
